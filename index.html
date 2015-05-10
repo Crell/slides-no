@@ -29,6 +29,7 @@
   <script src="lib/js/html5shiv.js"></script>
   <![endif]-->
 
+  <script src="palantir/classer.js"></script>
 
   <style type="text/css">
 
@@ -53,6 +54,14 @@
 
     *.topspace {
       margin-top: 1em;
+    }
+
+    blockquote em {
+      color: #9fc855;
+    }
+
+    .struck {
+      text-decoration: line-through;
     }
 
   </style>
@@ -116,9 +125,9 @@
       </section>
       <section>
         <blockquote>
-          People think <strong>focus</strong> means saying yes to the thing you've got to focus on.
-          But that's not what it means at all. It <strong>means saying no to the hundred
-          other good ideas that there are.</strong> You have to pick carefully. I'm
+          People think <em>focus</em> means saying yes to the thing you've got to focus on.
+          But that's not what it em at all. It <em>means saying no to the hundred
+          other good ideas that there are.</em> You have to pick carefully. I'm
           actually as proud of the things we haven't done as the things I have done.
           Innovation is saying no to 1,000 things.
         </blockquote>
@@ -180,8 +189,123 @@
     </section>
 
     <section>
+      <section>
+        <h2>Drupal theming</h2>
+        <ul>
+          <li class="fragment">Theme an object (via preprocess)</li>
+          <li class="fragment">Theme some variables (via template)</li>
+        </ul>
+        <div style="margin-top: 2em;" class="fragment">
+          <ul>
+            <li><a href="http://www.palantir.net/blog/explaining-panels-overview-drupal-developers">Explaining Panels</a> </li>
+            <li><a href="http://www.palantir.net/blog/explaining-panels-why-i-use-panels">Why I use Panels</a></li>
+            <li><a href="https://events.drupal.org/losangeles2015/sessions/rendering-html-drupal-past-present-and-future">Rendering HTML, Past, Present, and Future</a></li>
+          </ul>
+          <p>&mdash;Steve Persch</p>
+        </div>
+        <aside class="notes">
+          <ul>
+            <li>Haven't said "no" to either approach</li>
+            <li>Both coexist implicitly = bad DX</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <img src="assets/theme-system.png" width="100%" alt="The Drupal 7 theme system" data-source="http://john.albin.net/drupal/arrays-of-doom" />
+      </section>
+
+      <section>
+        <h2>Drupal look-and-feel</h2>
+        <p><q>Who choses the markup?</q></p>
+        <ul style="margin-top: 1em;">
+          <li class="fragment">Template author?</li>
+          <li class="fragment">Module developer?</li>
+          <li class="fragment">Site builder?</li>
+        </ul>
+        <aside class="notes">
+          <ul>
+            <li>Section vs Aside for blocks, DC Copenhagen</li>
+            <li>Twig incompatible with Semantic Views</li>
+            <li>Break the UI</li>
+            <li>"You can choose" == "you have to know/support all"</li>
+            <li>Render API complexity exists for this reason</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <q>Hey developers who want a simple, consistent system...</q>
+        <img class="fragment" src="assets/grumpy-cat-no.jpg" alt="No" />
+        <aside class="notes">
+          <ul>
+            <li>And documenters</li>
+            <li>And trainers</li>
+            <li>And maintainers</li>
+            <li>And users</li>
+          </ul>
+        </aside>
+      </section>
+    </section>
+
+
+    <section>
       <blockquote>
-        <strong>As a tech lead I see my primary contribution as saying "no" to features</strong>
+        In case of conflict, consider <em>users</em> over <em>authors</em>
+        over <em>implementers</em> over <em>specifiers</em> over <em>theoretical purity</em>.
+      </blockquote>
+      <p>&mdash;HTML5 Working Group</p>
+      <p style="margin-top: 1em;" class="fragment">(<a href="http://www.garfieldtech.com/blog/drupal-priorities">Drupal's audience priorities</a>, 2010)</p>
+      <aside class="notes">
+        <ul>
+          <li>Framework for saying "No"</li>
+          <li>Prioritization</li>
+          <li>"We're going to make someone unhappy; let's at least be consistent."</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section>
+      <section>
+        <h2>Laptops</h2>
+        <img src="assets/x1-carbon-closed.jpg" alt="The Lenovo X1 Carbon Ultrabook" data-source="https://major.io/2013/08/24/get-a-rock-solid-linux-touchpad-configuration-for-the-lenovo-x1-carbon/" />
+        <aside class="notes">
+          <ul>
+            <li>No to CD drive, SD card, VGA...</li>
+            <li>Only 2 USB ports</li>
+            <li>But much lighter!</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>Laptops</h2>
+        <img src="assets/macbook-2015.jpg" alt="The new Macbook has only one port" data-source="https://www.apple.com/pr/products/macbook/macbook.html" />
+        <aside class="notes">
+          <ul>
+            <li>No to all the things!</li>
+          </ul>
+        </aside>
+      </section>
+    </section>
+
+    <section>
+      <section>
+        <p class="bigtext">Sometimes we can say no...</p>
+        <ul>
+          <li class="fragment">Backward compatibility</li>
+          <li class="fragment"><span id="oop">OOP</span> <span class="fragment" data-classer="oop" data-classer-class="struck">Procedural</span></li>
+          <li class="fragment">$5 hosting</li>
+        </ul>
+        <aside class="notes">
+          <ul>
+            <li>If you don't have an opcode cache, don't even ask</li>
+            <li>PHP 5.4 => minority of the market</li>
+          </ul>
+        </aside>
+      </section>
+    </section>
+
+    <section>
+      <blockquote>
+        <em>As a tech lead I see my primary contribution as saying "no" to features</em>
         that co-workers think are important but can’t justify. The real trick is
         knowing when a new feature adds linear complexity (its own weight only)
         or geometric complexity (interacts with other features). Both should be
@@ -197,27 +321,40 @@
     </section>
 
     <section>
+      <img src="assets/google-homepage.png" alt="The Google Home page says No to almost everything" />
+    </section>
+
+    <section>
+      <img src="assets/grumpy-cat-3.jpg" alt="No" data-source="http://movieweb.com/grumpy-cat-movie-in-development-at-broken-road-productions/" />
+    </section>
+
+    <section>
+      <blockquote>How do you make a statue of an elephant? Get the biggest granite block you can find and chip away everything that doesn’t look like an elephant.</blockquote>
+      <aside class="notes">
+        <ul>
+          <li>Say "no" to non-elephant parts.</li>
+        </ul>
+      </aside>
+    </section>
+    <section>
       <img src="assets/steve-jobs-focus-quote.jpg" alt="Deciding what not to do is as important as deciding what to do." data-source="http://likesuccess.com/253233" />
+    </section>
+    <section>
+      <h1>Discuss</h1>
+      <h2 class="fragment">And say no...</h2>
     </section>
 
     <section id="final">
       <h2>Larry Garfield</h2>
-
-      <p>Senior Architect, <a href="http://www.palantir.net/">Palantir.net</a>
-      </p>
-
+      <p>Senior Architect, <a href="http://www.palantir.net/">Palantir.net</a></p>
       <p>Let's Make Something Good Together.</p>
-
-      <p>Keep tabs on our work at <a href="http://twitter.com/Palantir">@Palantir</a>
-      </p>
+      <p>Keep tabs on our work at <a href="http://twitter.com/Palantir">@Palantir</a></p>
     </section>
   </div>
 </div>
 
 <footer class="palantir-logo">
-  <a href="http://www.palantir.net/"><img
-          src="palantir/palantirnet-logo-4c-reversed.svg"
-          alt="Palantir.net logo" height="37"/></a>
+  <a href="http://www.palantir.net/"><img src="palantir/palantirnet-logo-4c-reversed.svg" alt="Palantir.net logo" height="37"/></a>
 </footer>
 
 <script src="lib/js/head.min.js"></script>
