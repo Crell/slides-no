@@ -1,6 +1,6 @@
 (function() {
   // Classer utility. When a fragment with data-classer is shown, some other
-  // element withthe ID specified with data-classer will get the class specified
+  // element with the ID specified with data-classer will get the class specified
   // by data-classer-class added to it. When the fragment is hidden the class
   // will be removed.
 
