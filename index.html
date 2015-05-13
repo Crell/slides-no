@@ -25,6 +25,8 @@
     document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
   </script>
 
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
   <!--[if lt IE 9]>
   <script src="lib/js/html5shiv.js"></script>
   <![endif]-->
@@ -64,6 +66,15 @@
       text-decoration: line-through;
     }
 
+    blockquote.twitter-tweet {
+
+    }
+
+    .tweet {
+      display: flex;
+      justify-content: center;
+    }
+
   </style>
 
 </head>
@@ -74,26 +85,14 @@
     <!-- Any section element inside of this container is displayed as a slide -->
     <section>
       <h1>Core Conversation</h1>
-
       <h2>DrupalCon Los Angeles</h2>
-
       <p>
-        <small>Presented by <a href="http://www.garfieldtech.com/">Larry
-          Garfield</a> (<a href="http://twitter.com/Crell">@Crell</a>)
+        <small>Presented by <a href="http://www.garfieldtech.com/">Larry Garfield</a> (<a href="http://twitter.com/Crell">@Crell</a>)
         </small>
       </p>
     </section>
     <section>
-      <h2><a href="http://twitter.com/Crell">@Crell</a></h2>
-      <img src="palantir/palantirnet-logo-4c-reversed.svg"
-           alt="Palantir.net Pays me!" style="width: 300px; float: right;"/>
-      <ul>
-        <li>Senior Architect, <a href="http://www.palantir.net/">Palantir.net</a></li>
-        <li>Drupal 8 Web Services Lead</li>
-        <li>Drupal Representative, <a href="http://www.php-fig.org/">PHP-FIG</a></li>
-        <li>Advisor, Drupal Association</li>
-        <li>Loveable pedant</li>
-      </ul>
+      <img src="assets/crell-tights.jpg" width="50%" alt="The Crab who's ready to be committed" />
     </section>
 
     <section>
@@ -101,7 +100,6 @@
       <aside class="notes">
         <ul>
           <li>Create or destroy</li>
-          <li></li>
         </ul>
       </aside>
     </section>
@@ -160,18 +158,56 @@
         </aside>
       </section>
       <section>
-        <blockquote>How do you make a statue of an elephant? Get the biggest granite block you can find and chip away everything that doesn’t look like an elephant.</blockquote>
+        <blockquote>
+          How do you make a statue of an elephant? Get the biggest
+          granite block you can find and chip away everything that doesn’t look like an elephant.
+        </blockquote>
         <aside class="notes">
           <ul>
             <li>Say "no" to non-elephant parts.</li>
           </ul>
         </aside>
       </section>
+      <section>
+        <h2>Bejeweled</h2>
+        <img src="assets/bejeweled.jpg" alt="Bejeweled got focus right" width="80%" data-credit="http://en.wikipedia.org/wiki/File:Bejeweled_deluxe_sc1.jpg" />
+        <aside class="notes">
+          <ul>
+            <li>Only ONE game move</li>
+            <li>Focused on simple game play</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>F-35</h2>
+        <img src="assets/f-35.jpg" alt="The F-35 Epic Fail" width="80%" data-credit="http://en.wikipedia.org/wiki/Lockheed_Martin_F-35_Lightning_II" />
+        <aside class="notes">
+          <ul>
+            <li>One multi-mode fighter</li>
+            <li>VSTOL + Stealth = Do both badly, and everything else</li>
+            <li>Only $1 trillion over budget</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>The Homer-mobile</h2>
+        <img src="assets/homer-car.png" alt="The Homer-Mobile" width="80%" data-credit="http://simpsons.wikia.com/wiki/The_Homer" />
+        <aside class="notes">
+          <ul>
+            <li>Add every feature</li>
+            <li>The result is... predictable</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>No one told Homer&hellip;</h2>
+        <img src="assets/grumpy-cat-3.jpg" alt="No" width="70%" data-credit="http://movieweb.com/grumpy-cat-movie-in-development-at-broken-road-productions/" />
+      </section>
     </section>
 
     <section>
       <section>
-        <h1>Optimize/Prioritize</h1>
+        <h1>Optimize/<br />Prioritize</h1>
       </section>
       <section>
         <blockquote>
@@ -207,6 +243,33 @@
             <li>No to all the things!</li>
           </ul>
         </aside>
+      </section>
+      <section>
+        <img src="assets/ultimate-swiss-army-knife.jpg" alt="This knife is not optimized" data-credit="http://www.thisiswhyimbroke.com/the-ultimate-swiss-army-knife" />
+        <aside class="notes">
+          <ul>
+            <li>Not optimized for any use case</li>
+            <li>Too big for the hand</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <img src="assets/impact-driver.jpg" alt="This tool does one thing well" data-credit="http://www.homedepot.com/p/Milwaukee-M18-FUEL-18-Volt-Brushless-Lithium-Ion-1-4-in-Hex-Impact-Driver-Compact-Battery-Kit-2653-22CT/203272114" />
+        <aside class="notes">
+          <ul>
+            <li>Does one thing: Apply lots of force.</li>
+            <li>Optimized for applying force</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>Databases</h2>
+        <ul>
+          <li class="fragment">Consistency</li>
+          <li class="fragment">Availability</li>
+          <li class="fragment">Partition Tolerance</li>
+        </ul>
+        <p class="fragment">Pick 2</p>
       </section>
       <section>
         <h2>Drupal theming</h2>
@@ -286,6 +349,35 @@
           Leading means saying No to velociraptors.
         </aside>
       </section>
+      <section>
+        <h2>Bad behavior</h2>
+        <div class="tweet">
+          <blockquote class="twitter-tweet" lang="en">
+            <p lang="en" dir="ltr">“The culture of any organization is shaped by the worst behavior the leader is willing to tolerate.&quot; <a href="https://twitter.com/ToddWhitaker">@ToddWhitaker</a> <a href="https://twitter.com/hashtag/hcps450?src=hash">#hcps450</a></p>&mdash; David Jones (@dljHCPS) <a href="https://twitter.com/dljHCPS/status/566431226571923456">February 14, 2015</a>
+          </blockquote>
+        </div>
+      </section>
+      <section>
+        <img src="assets/bad-day-cat.jpg" width="80%" alt="Don't tolerate this behavior" data-credit="http://my.is/forums/f122/canadian-bs-thread-random-chat-may-nsfw-360697/index332.html" />
+        <p class="fragment">No!</p>
+      </section>
+      <section>
+        <h2>Deletion API, 2007</h2>
+        <ul>
+          <li class="fragment"><a href="https://www.drupal.org/u/hunmonk">Chad Phillips</a> (hunmonk)</li>
+          <li class="fragment">Collect deletion queries, batch, save</li>
+          <li class="fragment">Committed!... <span class="fragment">For 10 minutes</span></li>
+        </ul>
+        <p class="fragment">Didn't say No soon enough</p>
+        <aside class="notes">
+          <ul>
+            <li>Committed by Steven Wittens, Rolled back by Dries</li>
+            <li>The Right Call technically!</li>
+            <li>Lost a contributor, didn't say No early enough</li>
+            <li>See also: Druplicon revamp</li>
+          </ul>
+        </aside>
+      </section>
     </section>
 
     <section>
@@ -295,6 +387,7 @@
           <li class="fragment">Backward compatibility</li>
           <li class="fragment"><span id="oop">OOP</span> <span class="fragment" data-classer="oop" data-classer-class="struck">Procedural</span></li>
           <li class="fragment">$5 hosting</li>
+          <li class="fragment">Code style violations <span class="fragment">(too much?)</span> </li>
         </ul>
         <aside class="notes">
           <ul>
@@ -303,25 +396,41 @@
           </ul>
         </aside>
       </section>
-      <section></section>
-      <p class="bigtext">Saying No should always be a deliberate, explicit action.</p>
-      <aside class="notes">
-        No is dangerous weapon. Use it wisely.
-      </aside>
-
+      <section>
+        <h3 id="nih">Not Invented Here</h3>
+        <h3 class="fragment" data-classer="nih" data-classer-class="struck">Proudly Invented Elsewhere</h3>
+        <img class="fragment" src="assets/pie.jpg" style="width: 75%" alt="Proudly Invented Elsewhere is tasty." data-credit="http://www.flickr.com/photos/jaypeg/300749794/" />
+      </section>
+      <section>
+        <h3>Functional programming<br />/Dependency Injection</h3>
+        <ul>
+          <li class="fragment">No to state</li>
+          <li class="fragment">No to implicit dependencies</li>
+          <li class="fragment">No to "quick and easy"</li>
+        </ul>
+        <p class="fragment">But YES to testing/maintainability </p>
+      </section>
+      <section>
+        <p class="bigtext">Who is Drupal for?</p>
+        <p class="fragment bigtext">"Everybody" is a coward's answer</p>
+        <p class="fragment bigtext">Who is Drupal <em>not</em> for?</p>
+      </section>
+      <section>
+        <p class="bigtext">Saying No should always be a deliberate, explicit action.</p>
+        <aside class="notes">
+          No is dangerous weapon. Use it wisely.
+        </aside>
+      </section>
     </section>
 
-
+<!--
     <section>
       <img src="assets/developer-ui.png" alt="The infamous developer UI says no to nothing" data-credit="http://blog.codinghorror.com/this-is-what-happens-when-you-let-developers-create-ui/" />
     </section>
     <section>
       <img src="assets/google-homepage.png" alt="The Google Home page says No to almost everything" />
     </section>
-
-    <section>
-      <img src="assets/grumpy-cat-3.jpg" alt="No" width="75%" data-credit="http://movieweb.com/grumpy-cat-movie-in-development-at-broken-road-productions/" />
-    </section>
+-->
 
     <section>
       <img src="assets/steve-jobs-focus-quote.jpg" alt="Deciding what not to do is as important as deciding what to do." data-credit="http://likesuccess.com/253233" />
